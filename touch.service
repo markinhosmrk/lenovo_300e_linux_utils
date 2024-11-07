@@ -1,0 +1,10 @@
+[Unit]
+Description=Touchscreen fix
+DefaultDependencies=no
+After=suspend.target
+Before=basic.target
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/touch.sh
+[Install]
+WantedBy=suspend.target
