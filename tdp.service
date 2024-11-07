@@ -1,0 +1,10 @@
+[Unit]
+Description=TDP unlock
+DefaultDependencies=no
+After=sysinit.target local-fs.target suspend.target
+Before=basic.target
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/tdp.sh
+[Install]
+WantedBy=basic.target suspend.target
